@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COSYJNR PORTFOLIO</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      height: 100%;
+    }
+
+    header {
+      background: linear-gradient(to right, #0d47a1, #1976d2);
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    /* 🔁 Blinking Title Animation */
+    @keyframes colorBlink {
+      0%   { color: #ffffff; }
+      25%  { color: #00bcd4; }
+      50%  { color: #1976d2; }
+      75%  { color: #0d47a1; }
+      100% { color: #ffffff; }
+    }
+
+    h1.blinking-title {
+      animation: colorBlink 2s infinite;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #222;
+      color: #999;
+      text-align: center;
+      padding: 15px;
+    }
+
+    a {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="blinking-title">COSMAS PORTFOLIO</h1>
+  <p>by Victor Cosmas</p>
+</header>
+
+<nav>
+  <a onclick="showTab('home')">Home</a>
+  <a onclick="showTab('about')">About</a>
+  <a onclick="showTab('projects')">Projects</a>
+  <a onclick="showTab('contact')">Contact</a>
+</nav>
+
+<main>
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>This is COSYJNR PORTFOLIO — your gateway to tech, blockchain, and software innovations.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <ul>
+      <li>I am Victor Cosmas, a passionate Computer Science student and crypto enthusiast.</li>
+      <li>I created COSYJNR PORTFOLIO to share insights, tools, and portfolio projects focused on blockchain, smart contracts, and Web3 technologies.</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li>✔ COSYJNR CRYPTO Portfolio Tracker</li>
+      <li>✔ Zara Language Compiler (in Python)</li>
+      <li>✔ Class Biometric Attendance System (as a group)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:jnrcosy@gmail.com">jnrcosy@gmail.com</a></p>
+    <p>☎️ Phone: <a href="tel:+254713099495">+254713099495</a></p>
+    <p>🧑‍💻 GitHub: <a href="https://github.com/COSMASVICTOR" target="_blank">github.com/COSMASVICTOR</a></p>
+    <p>📷 Instagram: <a href="https://instagram.com/cosmas_vikta" target="_blank">@cosmas_vikta</a></p>
+    <p>🐦 X / Twitter: <a href="https://x.com/cicycosy" target="_blank">@cicycosy</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/254713099495" target="_blank">Chat on WhatsApp</a></p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 COSYJNR | All rights reserved.
+</footer>
+
+<script>
+  function showTab(tabId) {
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
